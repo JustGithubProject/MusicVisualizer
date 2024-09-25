@@ -1,0 +1,3 @@
+/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles/MusicVisualizer.dir
+/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles/edit_cache.dir
+/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles/rebuild_cache.dir
