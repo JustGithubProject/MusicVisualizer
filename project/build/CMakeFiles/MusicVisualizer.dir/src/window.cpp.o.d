@@ -1,5 +1,5 @@
-CMakeFiles/MusicVisualizer.dir/src/main.cpp.o: \
- /home/kropiva/Downloads/c++/music\ visualizer/project/src/main.cpp \
+CMakeFiles/MusicVisualizer.dir/src/window.cpp.o: \
+ /home/kropiva/Downloads/c++/music\ visualizer/project/src/window.cpp \
  /usr/include/stdc-predef.h \
  /home/kropiva/Downloads/c++/music\ visualizer/project//include/window.hpp \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \

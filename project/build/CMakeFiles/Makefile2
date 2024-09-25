@@ -81,12 +81,12 @@ clean: CMakeFiles/MusicVisualizer.dir/clean
 CMakeFiles/MusicVisualizer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MusicVisualizer.dir/build.make CMakeFiles/MusicVisualizer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MusicVisualizer.dir/build.make CMakeFiles/MusicVisualizer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles" --progress-num=1,2 "Built target MusicVisualizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles" --progress-num=1,2,3 "Built target MusicVisualizer"
 .PHONY : CMakeFiles/MusicVisualizer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MusicVisualizer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MusicVisualizer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kropiva/Downloads/c++/music visualizer/project/build/CMakeFiles" 0
 .PHONY : CMakeFiles/MusicVisualizer.dir/rule

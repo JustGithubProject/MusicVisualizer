@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MusicVisualizer.dir/src/main.cpp.o"
   "CMakeFiles/MusicVisualizer.dir/src/main.cpp.o.d"
+  "CMakeFiles/MusicVisualizer.dir/src/window.cpp.o"
+  "CMakeFiles/MusicVisualizer.dir/src/window.cpp.o.d"
   "MusicVisualizer"
   "MusicVisualizer.pdb"
 )

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kropiva/Downloads/c++/music visualizer/project/src/main.cpp" "CMakeFiles/MusicVisualizer.dir/src/main.cpp.o" "gcc" "CMakeFiles/MusicVisualizer.dir/src/main.cpp.o.d"
+  "/home/kropiva/Downloads/c++/music visualizer/project/src/window.cpp" "CMakeFiles/MusicVisualizer.dir/src/window.cpp.o" "gcc" "CMakeFiles/MusicVisualizer.dir/src/window.cpp.o.d"
   )
 
 # Targets to which this target links.

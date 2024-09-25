@@ -9,11 +9,12 @@ class Window {
     public:
         Window(size_t width, size_t height, std::string windowTitle);
 
-        void run(sf::RenderWindow& window);
+        void run();
     private:
         size_t width;
         size_t height;
         std::string windowTitle;
+        sf::RenderWindow window;
     };
 };
 
