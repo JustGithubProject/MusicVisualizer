@@ -2,6 +2,7 @@
 #define WINDOW_HPP
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <string>
 
 namespace MusicVisualizer {

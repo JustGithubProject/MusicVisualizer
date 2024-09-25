@@ -9,6 +9,10 @@ Window::Window(size_t width, size_t height, std::string windowTitle)
        window(sf::VideoMode(width, height), windowTitle) {}
 
 void Window::run() {
+    sf::Music music;
+    if (!music.openFromFile("/home/kropiva/Downloads/ambient-128950.wav"))
+        std::exit(0);
+    music.play();
     while (window.isOpen()) {
         sf::Event event;
         while(window.pollEvent(event)) {
@@ -16,7 +20,7 @@ void Window::run() {
                 window.close();
             }
         }
-        window.clear();
+        window.clear(sf::Color::White);
         window.display();
     }
 }

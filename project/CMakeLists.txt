@@ -10,4 +10,4 @@ find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
 add_executable(MusicVisualizer src/main.cpp src/window.cpp)
 
-target_link_libraries(MusicVisualizer sfml-graphics sfml-window sfml-system)
+target_link_libraries(MusicVisualizer sfml-graphics sfml-window sfml-system sfml-audio)
