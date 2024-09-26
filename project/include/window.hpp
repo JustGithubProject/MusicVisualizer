@@ -1,9 +1,14 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <vector>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include <string>
+#include <miniaudio.h>
 
 namespace MusicVisualizer {
 class Window {
@@ -16,6 +21,10 @@ class Window {
         size_t height;
         std::string windowTitle;
         sf::RenderWindow window;
+        ma_engine engine;
+        ma_sound sound;
+
+        void startMusicHelper(const std::string& pathToFile);
     };
 };
 

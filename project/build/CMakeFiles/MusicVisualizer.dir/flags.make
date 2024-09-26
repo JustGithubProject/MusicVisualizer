@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/kropiva/Downloads/c++/music visualizer/project/$(PROJECT_SOURCE_DIR)/include"
+CXX_INCLUDES = -I"/home/kropiva/Downloads/c++/music visualizer/project/$(PROJECT_SOURCE_DIR)/include" -I"/home/kropiva/Downloads/c++/music visualizer/project/$(PROJECT_SOURCE_DIR)/miniaudio-master"
 
 CXX_FLAGS = -std=gnu++17
 
