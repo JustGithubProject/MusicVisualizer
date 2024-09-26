@@ -2,9 +2,6 @@
 
 namespace MusicVisualizer {
 
-const int numLines = 100; 
-const float maxAmplitude = 300;
-
 Window::Window(size_t width, size_t height, std::string windowTitle)
     :  width(width),
        height(height),
@@ -12,22 +9,19 @@ Window::Window(size_t width, size_t height, std::string windowTitle)
        window(sf::VideoMode(width, height), windowTitle) {}
 
 
-void Window::startMusicHelper(const std::string& pathToFile) {
-    /*
-        Helper function to start music
-    */
-    result = ma_sound_init_from_file(pathToFile, 0, NULL, NULL, &sound);
-    if (result != MA_SUCCESS) {
-        std::cerr << "Failed to load music" << std::endl;
+void Window::run() {
+    std::string pathToFile = "/home/kropiva/Downloads/ambient-128950.wav";
+    // Window::startMusicHelper(pathToFile);
+    if (!buffer.loadFromFile(pathToFile)) {
+        std::cerr << "Failed to load file" << std::endl;
         return;
     }
-    
-    ma_sound_start(&sound);
-}
+    const sf::Int16* samples = buffer.getSamples();
+    size_t sampleCount = buffer.getSampleCount();
+    unsigned int sampleRate = buffer.getSampleRate();
 
-void Window::run() {
-    startMusicHelper("/home/kropiva/Downloads/ambient-128950.wav");
-    std::vector<sf::Vertex> lines(numLines);
+    sound.setBuffer(buffer);
+    sound.play();
 
     while (window.isOpen()) {
         sf::Event event;
@@ -36,40 +30,30 @@ void Window::run() {
                 window.close();
             }
         }
-        window.clear(sf::Color::White);
+        window.clear();
 
-        float currentVolume = 0.0f;
-        ma_uint64 totalSamplesRead = 0;
-        float buffer[4096];
-        while (totalSamplesRead < 4096) {
-            ma_uint64 samplesRead = ma_sound_read_pcm_frames(&sound, buffer, 4096);
-            if (samplesRead == 0)
-                break;
-            
-            for (ma_uint64 i = 0; i < samplesRead; ++i) {
-                currentVolume += std::fabs(buffer[i]);
+        sf::Time currentTime = sound.getPlayingOffset();
+        size_t currentSample = currentTime.asSeconds() * sampleRate;
+
+        // Amount of samples to display
+        size_t samplesToDisplay = window.getSize().x;
+        std::vector<sf::Vertex> vertices(samplesToDisplay * 2);
+
+        for (std::size_t i = 0; i < samplesToDisplay; ++i) {
+            if (currentSample + i < sampleCount) {
+                float amplitude = samples[currentSample + i] / 32768.0f; 
+                float x = static_cast<float>(i);
+                float y = window.getSize().y / 2 * (1 - amplitude);
+
+                vertices[i * 2] = sf::Vertex(sf::Vector2f(x, window.getSize().y / 2), sf::Color::White);
+                vertices[i * 2 + 1] = sf::Vertex(sf::Vector2f(x, y), sf::Color::White);
             }
-            
-            totalSamplesRead += samplesRead;
         }
 
-        currentVolume /= totalSamplesRead;
-        currentVolume *= maxAmplitude;
-
-        for (int i = 0; i < numLines; ++i) {
-            float x = static_cast<float>(i) * (800.0f / numLines); 
-            float y = 600 - currentVolume; 
-
-            lines[i].position = sf::Vector2f(x, y);
-            lines[i].color = sf::Color::Green;
-        }
-
-        window.draw(&lines[0], lines.size(), sf::LinesStrip);
+        window.draw(&vertices[0], vertices.size(), sf::Lines);
 
         window.display();
     }
-
-    ma_sound_uninit(&sound);
 }
 
 };

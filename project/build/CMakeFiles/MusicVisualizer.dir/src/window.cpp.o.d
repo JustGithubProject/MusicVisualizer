@@ -280,5 +280,4 @@ CMakeFiles/MusicVisualizer.dir/src/window.cpp.o: \
  /usr/include/SFML/Audio/SoundFileFactory.hpp \
  /usr/include/SFML/Audio/SoundFileFactory.inl \
  /usr/include/SFML/Audio/SoundFileReader.hpp \
- /usr/include/SFML/Audio/SoundFileWriter.hpp \
- /home/kropiva/Downloads/c++/music\ visualizer/project//miniaudio-master/miniaudio.h
+ /usr/include/SFML/Audio/SoundFileWriter.hpp

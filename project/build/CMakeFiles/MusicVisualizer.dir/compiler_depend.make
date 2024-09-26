@@ -346,8 +346,7 @@ CMakeFiles/MusicVisualizer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SFML/Audio/SoundFileFactory.hpp \
   /usr/include/SFML/Audio/SoundFileFactory.inl \
   /usr/include/SFML/Audio/SoundFileReader.hpp \
-  /usr/include/SFML/Audio/SoundFileWriter.hpp \
-  ../miniaudio-master/miniaudio.h
+  /usr/include/SFML/Audio/SoundFileWriter.hpp
 
 CMakeFiles/MusicVisualizer.dir/src/window.cpp.o: ../src/window.cpp \
   /usr/include/stdc-predef.h \
@@ -694,8 +693,7 @@ CMakeFiles/MusicVisualizer.dir/src/window.cpp.o: ../src/window.cpp \
   /usr/include/SFML/Audio/SoundFileFactory.hpp \
   /usr/include/SFML/Audio/SoundFileFactory.inl \
   /usr/include/SFML/Audio/SoundFileReader.hpp \
-  /usr/include/SFML/Audio/SoundFileWriter.hpp \
-  ../miniaudio-master/miniaudio.h
+  /usr/include/SFML/Audio/SoundFileWriter.hpp
 
 
 ../src/window.cpp:
@@ -1225,8 +1223,6 @@ CMakeFiles/MusicVisualizer.dir/src/window.cpp.o: ../src/window.cpp \
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-../miniaudio-master/miniaudio.h:
 
 /usr/include/c++/11/system_error:
 

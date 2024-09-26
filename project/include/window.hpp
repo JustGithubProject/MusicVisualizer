@@ -8,7 +8,6 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include <miniaudio.h>
 
 namespace MusicVisualizer {
 class Window {
@@ -21,10 +20,9 @@ class Window {
         size_t height;
         std::string windowTitle;
         sf::RenderWindow window;
-        ma_engine engine;
-        ma_sound sound;
+        sf::SoundBuffer buffer;
+        sf::Sound sound;
 
-        void startMusicHelper(const std::string& pathToFile);
     };
 };
 
