@@ -10,7 +10,7 @@ Window::Window(size_t width, size_t height, std::string windowTitle)
 
 
 void Window::run() {
-    std::string pathToFile = "/home/kropiva/Downloads/ambient-128950.wav";
+    std::string pathToFile = "/home/kropiva/Downloads/output.wav";
     // Window::startMusicHelper(pathToFile);
     if (!buffer.loadFromFile(pathToFile)) {
         std::cerr << "Failed to load file" << std::endl;
